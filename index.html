@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Movie App</title>
+</head>
+
+<body>
+  <header>
+    <h1>Should I watch it?</h1>
+    <form id="form">
+      <input type="text" placeholder="Search" id="search" class="search" />
+    </form>
+  </header>
+  <main id="main">
+    <!-- goat -->
+    <div class="movie" onclick="playVideoPopup()">
+      <img src="https://upload.wikimedia.org/wikipedia/en/1/1e/The_Greatest_of_All_Time.jpg" alt="GOAT"/>
+      <div class="movie-info">
+        <h3>GOAT</h3>
+        <span class="${getClassByRate(vote_average)}">6.5</span>
+      </div>
+      <div class="overview">
+        <h3>Overview</h3>
+        Gandhi is a hostage negotiator, field agent, and spy working for the Special Anti-Terrorist Squad (SATS). After years of service, he is called back for a critical mission that sets him on a dangerous collision course with his own past.
+      </div>
+    </div>
+    <!-- devara -->
+    <div class="movie">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Devara_Part_1.jpg" alt="DEVARA"/>
+        <div class="movie-info">
+          <h3>DEVARA</h3>
+          <span class="${getClassByRate(vote_average)}">6.2</span>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          A mighty sea warrior takes a violent stand against the criminal deeds of his village. Years later, his mild-mannered son walks a path of his own.
+        </div>
+      </div>
+      <!--Kanguva -->
+      <div class="movie">
+        <img src="https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/kanguva-et00357490-1711005979.jpg" alt="KANGUVA"/>
+        <div class="movie-info">
+          <h3>KANGUVA</h3>
+          <span class="${getClassByRate(vote_average)}">5.5</span>
+        </div>
+        <div class="overview">
+          <h3>Overview</h3>
+          A tribal warrior's fierce struggle to save his people a millennium ago is mysteriously linked to a shadow cop's perilous quest in the present.
+        </div>
+      </div>
+      
+
+      <div id="videoModal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="closeModal" onclick="closeVideoPopup()">&times;</span>
+          <video src="videos/goattrailer.mp4" controls></video>
+            <!-- <source src="/videos/goattrailer.mp4" type="video/mp4"> -->
+          
+          </video>
+        </div>
+      </div>
+
+
+  </main>
+  <footer class="footer">
+    <p>
+      This project uses the TMDb API but is not endorsed or certified by TMDb.
+    </p>
+  </footer>
+  <script src="script.js"></script> 
+</body>
+
+</html>
